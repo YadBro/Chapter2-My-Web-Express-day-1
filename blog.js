@@ -19,6 +19,7 @@ function addBlog(event) {
     event.preventDefault();
 
     const projectNameInput = document.querySelector('#projectName').value;
+
     const projectDateInput = {
         startDate: document.querySelector('#startDate').value,
         endDate: document.querySelector('#endDate').value
@@ -179,19 +180,22 @@ function projectDetail(event) {
 
 function getDistanceTime(time, time2) {
     // console.log(typeof time);
-    // selisih waktu saat ini - waktu postingan = selisih waktu
     const distance = (time2 - time)
-    console.log(distance);
-    //convert to day
     const miliseconds = 1000
     const secondInMinute = 60
     const minuteInHour = 60
-    const secondInHour = secondInMinute * minuteInHour // 3600
+    const secondInHour = secondInMinute * minuteInHour
     const hourInDay = 23
 
     let dayDistance = distance / (miliseconds * secondInHour * hourInDay)
 
-    if (dayDistance >= 1) {
+    if (dayDistance > 60) {
+        const time = (Math.floor(dayDistance) - 60)
+        return `${time} day 2 month`
+    } else if (dayDistance > 30) {
+        const time = (Math.floor(dayDistance) - 30)
+        return `${time} day 1 month`
+    } else if (dayDistance >= 1) {
         const time = Math.floor(dayDistance) + ' day'
         return time
     } else {
