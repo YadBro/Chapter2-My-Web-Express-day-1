@@ -18,20 +18,20 @@ function addBlog(event) {
     /** menambahkan blog post baru*/
     event.preventDefault();
 
-    const projectNameInput = document.querySelector('#projectName').value;
+    const projectNameInput = document.querySelector('#inputName').value;
 
     const projectDateInput = {
-        startDate: document.querySelector('#startDate').value,
-        endDate: document.querySelector('#endDate').value
+        startDate: document.querySelector('#inputStartDate').value,
+        endDate: document.querySelector('#inputEndDate').value
     }
-    const projectDescriptionInput = document.querySelector('#description').value;
+    const projectDescriptionInput = document.querySelector('#inputDescription').value;
     const projectTechnologiesInput = {
         nodeJs: document.querySelector('input[name="nodeJsTechnology"]').checked,
         nextJs: document.querySelector('input[name="nextJsTechnology"]').checked,
         reactJs: document.querySelector('input[name="reactJsTechnology"]').checked,
         typeScript: document.querySelector('input[name="typeScriptTechnology"]').checked
     };
-    let projectImageInput = document.querySelector('#fileImage');
+    let projectImageInput = document.querySelector('#inputFile');
     projectImageInput = URL.createObjectURL(projectImageInput.files[0]);
 
     let blog = {
@@ -398,7 +398,6 @@ function removeStorageItem() {
             for (let index = 0; index < localStorage.length; index++) {
                 const keyName = localStorage.key(index);
                 localStorage.removeItem(keyName);
-
             }
         }
 

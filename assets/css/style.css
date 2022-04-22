@@ -1,22 +1,137 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 
-* {
+/* * {
     margin: 0;
     padding: 0;
+} */
+
+:root{
+    --botton-color: #111727;
+    --body-background-color: #e2e6ea;
+    --text-color-pudar: #616161;
 }
 
+.text-color-pudar{
+    color: var(--text-color-pudar);
+}
+.actions{
+    display: flex;
+}
+.test1{
+    margin-top: 100%;
+}
+.actions .edit-button  {
+    padding: 3px 10px;
+    text-align: center;
+    border: none;
+    color: white;
+    width: 50%;
+    margin-right: 5px;
+    border-radius: 10px;
+    font-size: 15px;
+    background-color: #111727;
+    cursor: pointer;
+}
+
+.actions .delete-button  {
+    padding: 3px 10px;
+    width: 50%;
+    margin-left: 5px;
+    border-radius: 10px;
+    align-items: left;
+    text-align: center;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    background-color: #111727;
+    border: none;
+
+}
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #e2e6ea;
+    background-color: var(--body-background-color);
+}
+.text{
+    text-align: justify;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    word-spacing: 2px;
+}
+.text-bold{
+    text-align: justify;
+    word-spacing: 2px;
+}
+.icon-logo a {
+    text-decoration: none;
+    color: black;
+}
+.technologies img{
+    width: 30px;
+    margin-right: 15px;
+    margin-bottom: 35px;
+}
+.duration {
+    color: var(--text-color-pudar);
+}
+.my-card{
+    border-radius: 10px;
+    box-shadow: 1px 1px 90px rgba(0, 0, 0, 0.304); 
+}
+.my-card img{
+    border-radius: 25px;
+}
+.out-card {
+    background-color: white;
+}
+.my-flex{
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width:1000px){
+    .my-flex{
+        flex-direction: column;
+    }
+}
+
+.form-check-input{
+    cursor: pointer;
+}
+.form-check-label{
+    color: var(--text-color-pudar);
+}
+.flex-68{
+    flex: 68%;
+}
+.flex-32{
+    flex: 32%;
+}
+
+.form select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='50' viewBox='0 0 24 24' width='100' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-size: 43px 43px;
+}
+
+.contact-me-button {
+    background-color: var(--botton-color);    
+}
+.contact-me-button a, button > a{
+    text-decoration: none;
 }
 
 /* NAV START */
+/*
 nav {
     display: flex;
     height: 7vh;
     background-color: #f4f4f4;
     font-size: 1.1em;
 }
+
 
 nav div {
     width: 50%;
@@ -37,7 +152,7 @@ nav .left a {
 
 /* nav .left ul a, nav .left img{
     
-} */
+}
 
 nav .left ul {
     margin-left: 30px;
@@ -52,24 +167,19 @@ nav .left img {
     width: 60px;
 }
 
-nav .right {
+/* .contact-me-button {
     justify-content: flex-end;
     margin-right: 5%;
-}
+} */
 
-nav .right a {
-    text-decoration: none;
-    color: white;
-    background-color: black;
-    padding: 10px 10px;
-    border-radius: 10px;
-}
+
 
 /* NAV END */
 
 
 
 /* CONTACT FROM START */
+/*
 .container-form {
     display: flex;
     height: 90vh;
@@ -155,16 +265,9 @@ textarea {
 
 
 /* CARD CLASS IN INDEX START */
-.out-card {
-    border: 1px solid white;
-    background-color: white;
-    box-shadow: 0px 50px 50px rgba(0, 0, 0, 0.304);
-    border-radius: 10px;
-    margin: 60px;
-    display: flex;
-    flex-direction: row;
-}
 
+
+/*
 
 @media (max-width: 600px) {
     .out-card {
@@ -275,6 +378,8 @@ p {
 
 
 /* ICON CLASS START */
+
+/*
 .icon-logo {
     margin-top: 50px;
     font-size: 55px;
@@ -285,10 +390,6 @@ p {
     border-radius: 20px;
 }
 
-.icon-logo a {
-    text-decoration: none;
-    color: black;
-}
 
 /* ICON CLASS END */
 
@@ -297,6 +398,7 @@ p {
 
 
 /* INPUT GROUP START */
+/*
 .input-group {
     display: flex;
     width: 100%;
@@ -317,6 +419,8 @@ p {
 
 
 /* TECHNOLOGIES CLASS START */
+/*
+
 .technologies-checkbox {
     margin-bottom: 30px;
 }
@@ -367,6 +471,8 @@ p {
 
 
 /* MY PROJECTS CLASS START */
+/*
+
 .myproject-content {
     width: 100%;
     text-align: center;
@@ -481,6 +587,8 @@ p {
 
 
 /** CONTENT STYLE START **/
+/*
+
 .content-title{
     align-items: center;
     justify-content: center;
@@ -497,6 +605,8 @@ p {
 
 
 /* CONTENT CARD TOP START */
+/*
+
 .container-content .content-card-top {
     display: flex;
     justify-content: center;
@@ -533,6 +643,8 @@ p {
 
 
 /* CONTENT CARD BUTTOM START */
+/*
+
 .content-card-buttom .content-description{
     text-align: justify;
 
@@ -567,6 +679,7 @@ p {
     font-size: 20px;
     line-height: 39px;
 }
+
 /* .project-technologies .technology-icons .right-icons{
     flex: 50%;
 }
